@@ -1,3 +1,0 @@
-interface fifo(
-    input clk
-);
