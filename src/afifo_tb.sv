@@ -14,12 +14,12 @@ tester_afifo t;
 afifo_if itf_tb();
 
 //Wrapper instantiation
-fifo_wrapper uut(
+fifo_wrapper uut
 ( 
 .wrclk(wrclk),
 .rdclk(rdclk),
 .arst_n(arst_n),
-.itf (itf_tb.mdr)
+.itf(itf_tb.mdr)
 );
 
 initial begin 
