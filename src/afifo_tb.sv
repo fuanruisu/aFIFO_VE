@@ -19,7 +19,7 @@ fifo_wrapper uut
 .wrclk(wrclk),
 .rdclk(rdclk),
 .arst_n(arst_n),
-.itf(itf_tb.mdr)
+.itf(itf_tb.fifo_mod)
 );
 
 initial begin 
