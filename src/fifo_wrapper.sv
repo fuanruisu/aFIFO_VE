@@ -1,6 +1,7 @@
 module fifo_wrapper 
 //FIXME[DEV]: import your tb package if needed. check I don't needed
 import fifo_pkg::*;
+import afifo_tb_pkg::*;
 ( 
 //FIXME[DEV] adjust this port to your convenience. check
 input bit wrclk,
