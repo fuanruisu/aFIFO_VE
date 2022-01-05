@@ -22,11 +22,11 @@ output empty
 modport tstr(
 output data_in,
 output push,
-output wrclk,
+//output wrclk,
 input full,
 input data_out,
 output pop,
-output rdclk,
+//output rdclk,
 input empty);
 
 endinterface

@@ -11,7 +11,7 @@ bit_t wrclk, rdclk, arst_n;
 tester_afifo t;
 
 //Interface instance
-afifo_if itf();
+afifo_if itf_tb();
 
 //Wrapper instantiation
 fifo_wrapper uut(
@@ -19,11 +19,11 @@ fifo_wrapper uut(
 .wrclk(wrclk),
 .rdclk(rdclk),
 .arst_n(arst_n),
-.itf (itf.mdr)
+.itf (itf_tb.mdr)
 );
 
 initial begin 
-	t = new(itf);
+	t = new(itf_tb);
 	
 end
 

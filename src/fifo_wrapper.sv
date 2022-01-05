@@ -8,14 +8,14 @@ input bit wrclk,
 input bit rdclk,
 input bit arst_n,
 //bring signal ports from interface
-afifo_tb_pkg.fifo_mod  itf
+afifo_tb_pkg.fifo_mod  itf_tb
 );
 
 fifo_if   itf();
 always_comb begin
    //FIXME[DEV]: complete these assignations. check
-   empty    = itf.fifo_mod.empty ;
-   full     = itf.fifo_mod.full;
+  static logic empty    = itf.fifo_mod.empty ;
+   static logic full     = itf.fifo_mod.full;
 end
 
 
