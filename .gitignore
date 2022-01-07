@@ -1,1 +1,4 @@
 /tb_env_mdr
+/*.q*
+/tb/work
+*.wlf
