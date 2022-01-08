@@ -5,4 +5,4 @@ onbreak {resume}
 set NoQuitOnFinish 1
 vsim -voptargs=+acc work.afifo_tb
 do wave.do
-run 50ms
+run 200ns

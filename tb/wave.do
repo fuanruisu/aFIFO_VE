@@ -1,28 +1,14 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /afifo_tb/uut/wr_clk
-add wave -noupdate /afifo_tb/uut/rd_clk
 add wave -noupdate /afifo_tb/wr_rst
 add wave -noupdate /afifo_tb/rd_rst
-add wave -noupdate /afifo_tb/itf/push
-add wave -noupdate /afifo_tb/itf/full
-add wave -noupdate -radix hexadecimal /afifo_tb/itf/data_in
-add wave -noupdate /afifo_tb/itf/pop
-add wave -noupdate /afifo_tb/itf/empty
-add wave -noupdate -radix hexadecimal /afifo_tb/itf/data_out
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/rptr_r2w_1
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/rptr_r2w_2
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/wq2_rptr
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/ram_w_addr
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/wptr_w2r_1
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/wptr_w2r_2
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/rq2_wptr
-add wave -noupdate -radix hexadecimal /afifo_tb/uut/ram_r_addr
-add wave -noupdate -childformat {{/afifo_tb/tester.popData -radix hexadecimal} {/afifo_tb/tester.temp_data -radix hexadecimal}} -expand -subitemconfig {/afifo_tb/tester.popData {-radix hexadecimal} /afifo_tb/tester.temp_data {-radix hexadecimal}} /afifo_tb/tester
+add wave -noupdate /afifo_tb/clk_wrt
+add wave -noupdate /afifo_tb/clk_read
+add wave -noupdate -childformat {{/afifo_tb/tester.exp_v -radix hexadecimal}} -expand -subitemconfig {/afifo_tb/tester.exp_v {-radix hexadecimal} /afifo_tb/tester.afifo {-height 15 -childformat {{/afifo_tb/tester.afifo.data_in -radix hexadecimal} {/afifo_tb/tester.afifo.data_out -radix hexadecimal}} -expand} /afifo_tb/tester.afifo.data_in {-height 15 -radix hexadecimal} /afifo_tb/tester.afifo.data_out {-height 15 -radix hexadecimal}} /afifo_tb/tester
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {49900 ps} 0}
+WaveRestoreCursors {{Cursor 1} {32965 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 179
+configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -36,4 +22,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {656260 ps}
+WaveRestoreZoom {42418 ps} {81976 ps}
